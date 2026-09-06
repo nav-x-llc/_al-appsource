@@ -9,5 +9,27 @@
       "projects": "*",
       "AuthTokenSecret": "githubToken"
     }
-  ]
+  ],
+  "ghTokenWorkflow": "GhTokenWorkflow",
+  "deployToTEST": {
+    "EnvironmentName": "NAV-X_Internal_QA",
+    "DependencyInstallMode": "upgrade",
+    "Branches": [
+      "internal-test"
+    ],
+    "continuousDeployment": true
+  },
+  "CICDPushBranches": [
+    "main",
+    "release/*",
+    "feature/*",
+    "internal-test"
+  ],
+  "CICDPullRequestBranches": [
+    "main",
+    "feature/*",
+    "internal-test"
+  ],
+  "installOnlyReferencedApps": false,
+  "useCompilerFolder": true
 }
