@@ -28,9 +28,20 @@
   "CICDPullRequestBranches": [
     "main",
     "feature/*",
-    "internal-test"
+    "internal-test",
+    "deploy/*"
   ],
   "useProjectDependencies": true,
   "installOnlyReferencedApps": false,
-  "useCompilerFolder": true
+  "useCompilerFolder": true,
+  "ConditionalSettings": [
+    {
+      "branches": [
+        "feature/*"
+      ],
+      "settings": {
+        "skipUpgrade": true
+      }
+    }
+  ]
 }
